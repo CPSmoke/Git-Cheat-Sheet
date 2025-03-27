@@ -1,80 +1,62 @@
 Git Commands
 ============
+### Получение и создание проектов
 
-## Translated Versions
-- [Versão em português](READMEpt.md)
-- [Versión en español](READMEes.md)
-- [Türkçe versiyon](READMEtr.md)
-- [Azərbaycanca versiya](READMEaz.md)
-- [বাংলা সংস্করণ](READMEbn.md)
-- [हिन्दी अनुवाद](READMEhi.md)
-- [العربية](READMEar.md)
-
-___
-
-_A list of my commonly used Git commands_
-
-*If you are interested in my Git aliases, have a look at my `.bash_profile`, found here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
-
---
-
-### Getting & Creating Projects
-
-| Command | Description |
+| Команда | Описание |
 | ------- | ----------- |
-| `git init` | Initialize a local Git repository |
-| `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
+| `git init` | Инициализируйте локальный репозиторий Git |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Создайте локальную копию удаленного репозитория |
 
-### Basic Snapshotting
+### Основная работа с снимками
 
-| Command | Description |
+| Команда | Описание |
 | ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
-| `git remote -v` | View the remote repository of the currently working file or directory |
+| `git status` | Проверьте состояние |
+| `git add [file-name.txt]` | Добавьте файл в промежуточную область |
+| `git add -A` | Добавляйте все новые и измененные файлы в промежуточную область |
+| `git commit -m "[commit message]"` | Фиксировать изменения |
+| `git rm -r [file-name.txt]` | Удаление файла (или папки) |
+| `git remote -v` | Просмотр удаленного хранилища текущего рабочего файла или каталога |
 
-### Branching & Merging
+### Ветвление и слияние
 
-| Command | Description |
+| Команда | Описание |
 | ------- | ----------- |
-| `git branch` | List branches (the asterisk denotes the current branch) |
-| `git branch -a` | List all branches (local and remote) |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Delete a branch |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
-| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
-| `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
-| `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
-| `git stash` | Stash changes in a dirty working directory |
-| `git stash clear` | Remove all stashed entries |
-| `git stash pop` | Apply latest stash to working directory |
+| `git branch` | Список ветвей (звездочкой обозначена текущая ветвь) |
+| `git branch -a` | Перечислите все филиалы (локальные и удаленные) |
+| `git branch [branch name]` | Создайте новую ветку |
+| `git branch -d [branch name]` | Удалить ветку |
+| `git push origin --delete [branch name]` | Удалить удаленную ветку |
+| `git checkout -b [branch name]` | Создайте новую ветку и переключитесь на нее |
+| `git checkout -b [branch name] origin/[branch name]` | Клонируйте удаленную ветку и переключайтесь на нее |
+| `git branch -m [old branch name] [new branch name]` | Переименовать локальную ветвь |
+| `git checkout [branch name]` | Переключиться на ветку |
+| `git checkout -` | Переключитесь на ветку, из которой вы выезжали последним |
+| `git checkout -- [file-name.txt]` | Отменить изменения в файле |
+| `git merge [branch name]` | Объединить ветку с активной веткой |
+| `git merge [source branch] [target branch]` | Объединить ветвь с целевой ветвью |
+| `git stash` | Сохраняйте изменения в грязном рабочем каталоге |
+| `git stash clear` | Удалите все сохраненные записи |
+| `git stash pop` | Применить последнюю версию тайника к рабочему каталогу |
 
-### Sharing & Updating Projects
+### Обмен и обновление проектов
 
-| Command | Description |
+| Команда | Описание |
 | ------- | ----------- |
-| `git push origin [branch name]` | Push a branch to your remote repository |
-| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
-| `git push` | Push changes to remote repository (remembered branch) |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+| `git push origin [branch name]` | Отправьте ветку в ваш удаленный репозиторий |
+| `git push -u origin [branch name]` | Перенесите изменения в удаленный репозиторий (и запомните ветку) |
+| `git push` | Отправка изменений в удаленный репозиторий (сохраненная ветвь) |
+| `git push origin --delete [branch name]` | Удалить удаленную ветку |
+| `git pull` | Обновите локальный репозиторий до последней фиксации |
+| `git pull origin [branch name]` | Извлекать изменения из удаленного репозитория |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Добавление удаленного репозитория |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Установите исходную ветвь репозитория на SSH |
 
-### Inspection & Comparison
+### Инспекция и сравнение
 
-| Command | Description |
+| Команда | Описание |
 | ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git log --oneline` | View changes (briefly) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git log` | Просмотр изменений |
+| `git log --summary` | Просмотреть изменения (подробные) |
+| `git log --oneline` | Просмотр изменений (кратко) |
+| `git diff [source branch] [target branch]` | Предварительный просмотр изменений перед объединением |
